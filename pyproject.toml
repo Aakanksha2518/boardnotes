@@ -1,0 +1,22 @@
+[project]
+name = "boardnotes"
+version = "0.1.0"
+description = "Turn photos of whiteboards, slides and handwritten pages into one Markdown file, using Gemma 4 vision."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["notes", "ocr", "handwriting", "gemma", "markdown", "cli"]
+dependencies = [
+    "requests>=2.31.0",
+    "google-genai>=1.0.0",
+]
+
+[project.scripts]
+boardnotes = "boardnotes.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["boardnotes"]
